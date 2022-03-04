@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FrontCake</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stilos.css">
+    <link rel="stylesheet" href="form.css">
+    <style>
+        body {
+            font-family: "Verdana", Georgia, Serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Barra -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+            <a href="#home" class="w3-bar-item w3-button">FrontCake</a>
+            <!-- Menu-->
+                <!--Cliente-->            
+                <button onclick="document.getElementById('id02').style.display='block'"
+                    class="w3-button w3-blue w3-large">Cliente</button>
+                
+                <div id="id02" class="w3-modal">
+                    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+                
+                        <div class="w3-center"><br>
+                            <span onclick="document.getElementById('id02').style.display='none'"
+                                class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Cerrar">×</span>
+                            <img src="imagenes/img_avatar4.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">
+                        </div>
+
+                        <!--Formulario para entrar-->
+                        <form class="w3-container" action="cliente.php" method="post">
+                            <div class="w3-section">
+                                <h2 style="text-align: center;">Esto es un Demo pon Datos ficticios.</h2>
+                                <label><b>Usuario</b></label>
+                                <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Pon tu Usuario"
+                                    name="usuario" required>
+                                <label><b>Password</b></label>
+                                <input class="w3-input w3-border" type="text" placeholder="Pon tu Password" name="psw" required>
+                                <button class="w3-button w3-block w3-blue w3-section w3-padding" type="submit">Entrar</button>
+                                <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Recuerdame
+                            </div>
+                        </form>
+                        <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                            <button onclick="document.getElementById('id02').style.display='none'" type="button"
+                                class="w3-button w3-red">Cancelar</button>
+                            <span class="w3-right w3-padding w3-hide-small">Olvidaste tu <a href="#">password?</a></span>
+                        </div>
+                    </div>
+                </div>
+                <!--Pastelero-->
+                <button onclick="document.getElementById('id01').style.display='block'"
+                    class="w3-button w3-blue w3-large">Pastelero</button>
+                
+                <div id="id01" class="w3-modal">
+                    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+                
+                        <div class="w3-center"><br>
+                            <span onclick="document.getElementById('id01').style.display='none'"
+                                class="w3-button w3-xlarge w3-transparent w3-display-topright" title="Cerrar">×</span>
+                            <img src="imagenes/img_avatar4.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">
+                        </div>
+                
+                        <!--Formulario para entrar-->
+                        <form class="w3-container" action="pastelero.php" method="post">
+                            <div class="w3-section">
+                                <h2 style="text-align: center;">Esto es un Demo pon Datos ficticios.</h2>
+                                <label><b>Usuario</b></label>
+                                <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Pon tu Usuario"
+                                    name="usuario" required>
+                                <label><b>Password</b></label>
+                                <input class="w3-input w3-border" type="text" placeholder="Pon tu Password" name="psw" required>
+                                <button class="w3-button w3-block w3-blue w3-section w3-padding" type="submit">Entrar</button>
+                                <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Recuerdame
+                            </div>
+                        </form>
+                        <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                            <button onclick="document.getElementById('id01').style.display='none'" type="button"
+                                class="w3-button w3-red">Cancelar</button>
+                            <span class="w3-right w3-padding w3-hide-small">Olvidaste tu <a href="#">password?</a></span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <!-- Cabecera -->
+    <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+        <img class="w3-image" img src="imagenes/pastel.jpg" alt="Pasteles" width="1600" height="800">
+        <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+            <h1 class="w3-xxlarge w3-light-grey">FrontCake</h1>
+        </div>
+    </header>
+    <!-- pie de pagina -->
+    <footer class="w3-center w3-light-grey w3-padding-32">
+        <p><a href="#home" title="Alan Molina" target=""
+                class="w3-hover-text-green">Alan Molina</a></p>
+    </footer>
+
+</body>
+
+</html>
